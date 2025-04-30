@@ -11,8 +11,8 @@ public class PremiereApplication extends Application {
     public void start(Stage stage) {
 
         stage.setTitle("Calendrier");
-        VBoxCalendrier root = new VBoxCalendrier();
-        Scene scene = new Scene(root,250, 400);
+        HBoxRoot root = new HBoxRoot();
+        Scene scene = new Scene(root,900, 400);
         File [] premiercss = new File("css").listFiles();
         for(File fichier : premiercss){
             scene.getStylesheets().add(fichier.toURI().toString());

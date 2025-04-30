@@ -4,20 +4,16 @@ import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import modele.Date;
 import modele.*;
-import modele.Constantes;
 
 import javafx.scene.Node;
-import javafx.geometry.Insets;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
 import java.util.List;
 
-import static modele.ConstantesCalendrier.*;
 
-
-public class VBoxRoot extends VBox implements modele.ConstantesCalendrier{
-    public VBoxRoot() {
+public class VBoxRootV2 extends VBox implements modele.ConstantesCalendrier{
+    public VBoxRootV2() {
 
         Date today = new Date();
 

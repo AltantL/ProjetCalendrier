@@ -111,7 +111,7 @@ public class VBoxCalendrier extends VBox implements modele.ConstantesCalendrier{
             public void handle(ActionEvent actionEvent) {
                 System.out.println("bouton Super Precedent");
                 while(!premierMois.equals(listNode.get(listNode.size()-1).getAccessibleText())) {
-                    listNode.get(listNode.size() - 1).toBack();
+                    listNode.get(listNode.size()-1).toBack();
                     labelTitle.setText(listNode.get(listNode.size()-1).getAccessibleText() + " " + today.getAnnee());
                 }
             }

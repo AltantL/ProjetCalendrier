@@ -25,6 +25,10 @@
     -fx-background-color: white;
 }
 
+.toggle-button:hover{
+    -fx-background-color: #D3D3D3;
+}
+
 .toggle-button:selected{
     -fx-background-color: gray;
 }
