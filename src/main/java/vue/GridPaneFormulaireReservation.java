@@ -2,11 +2,8 @@ package vue;
 
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
-import modele.CalendrierDuMois;
-import modele.ConstantesCalendrier;
+import constantes.ConstantesCalendrier;
 import modele.Date;
-
-import static modele.ConstantesCalendrier.*;
 
 public class GridPaneFormulaireReservation extends GridPane implements ConstantesCalendrier {
     public GridPaneFormulaireReservation() {
@@ -42,10 +39,24 @@ public class GridPaneFormulaireReservation extends GridPane implements Constante
         radioGroup.getToggles().addAll(radioButtonDebutant, radioButtonMoyen, radioButtonAvance, radioButtonExpert);
 
         ComboBox<String> heureDepart;
+        heureDepart = peupleComboBox(HEURES);
         ComboBox<String> minuteDepart;
+        minuteDepart = peupleComboBox(MINUTES);
         ComboBox<String> heureFin;
+        heureFin = peupleComboBox(HEURES);
         ComboBox<String> minuteFin;
+        minuteFin = peupleComboBox(MINUTES);
         
+        Label lableDe = new Label("de");
+        Label labelH1 = new Label("h");
+        Label labelMn1 = new Label("mn");
+        Label labelH2 = new Label("h");
+        Label labelMn2 = new Label("mn");
+        Label labelA = new Label("à");
+
+        Button buttonAnnuler = new Button("Annuler");
+        Button buttonEnregistrer = new Button("Enregistrer");
+
 
 
         //espace pour H et V
@@ -72,5 +83,33 @@ public class GridPaneFormulaireReservation extends GridPane implements Constante
         this.add(labelAvance, 2, 3,1,1);
         this.add(labelExpert, 4, 3,1,1);
 
+        //horaire
+        this.add(heureDepart, 2, 4,1,1);
+        this.add(heureFin, 2, 5,1,1);
+        this.add(minuteDepart, 4, 4,1,1);
+        this.add(minuteFin, 4, 5,1,1);
+
+        //mot dans horaire
+        this.add(lableDe, 1, 4,1,1);
+        this.add(labelA, 1, 5,1,1);
+        this.add(labelH1, 3, 4,1,1);
+        this.add(labelMn1, 5, 4,1,1);
+        this.add(labelH2, 3, 5,1,1);
+        this.add(labelMn2, 5, 5,1,1);
+
+        //bouton
+        this.add(buttonAnnuler, 2, 6,1,1);
+        this.add(buttonEnregistrer, 4, 6,1,1);
+
+
+    }
+
+    private ComboBox<String> peupleComboBox(String[] strings) {
+        ComboBox<String> comboBox = new ComboBox<>();
+        for(String string : strings) {
+            comboBox.getItems().add(string);
+        }
+        comboBox.setValue(strings[0]);
+        return comboBox;
     }
 }

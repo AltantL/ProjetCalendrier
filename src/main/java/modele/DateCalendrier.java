@@ -2,11 +2,13 @@
 package modele;
 
 
+import constantes.ConstantesCalendrier;
+
 import java.util.Calendar;
 
-//import static modele.ConstantesCalendrier.*;
+//import static constantes.ConstantesCalendrier.*;
 
-public class DateCalendrier extends Date implements modele.ConstantesCalendrier, Comparable <Date>  {
+public class DateCalendrier extends Date implements ConstantesCalendrier, Comparable <Date>  {
 
     private int jourSemaine;
     private int weekOfYear ;

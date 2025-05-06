@@ -1,5 +1,6 @@
 package vue;
 
+import constantes.ConstantesCalendrier;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import modele.Date;
@@ -12,7 +13,7 @@ import javafx.event.EventHandler;
 import java.util.List;
 
 
-public class VBoxRootV2 extends VBox implements modele.ConstantesCalendrier{
+public class VBoxRootV2 extends VBox implements ConstantesCalendrier {
     public VBoxRootV2() {
 
         Date today = new Date();
