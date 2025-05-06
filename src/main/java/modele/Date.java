@@ -27,6 +27,12 @@ public class Date implements Serializable {
         chJour = dateAuj.get (Calendar.DAY_OF_MONTH);
     }
 
+    public int getNumSemaine(){
+        Calendar date = Calendar.getInstance();
+        date.set (chJour, chMois-1, chAnnee);
+        return date.get (Calendar.DAY_OF_WEEK);
+    }
+
     /**
      retourne true si this est une date valide
      -  chAnnee > 1582

@@ -1,6 +1,7 @@
 package vue;
 
 import constantes.ConstantesCalendrier;
+import controleur.Controleur;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import modele.Date;
@@ -51,8 +52,7 @@ public class VBoxCalendrier extends VBox implements ConstantesCalendrier {
                 tilePane.getChildren().add(boutonDate);
 
                 boutonDate.setUserData(date);
-                boutonDate.setOnAction(new EventHandler<ActionEvent>() {
-                    @Override
+                boutonDate.setOnAction(new Controleur() {
                     public void handle(ActionEvent event) {
                         System.out.println(date);
                     }

@@ -1,18 +1,21 @@
 package vue;
 
+import controleur.Controleur;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import constantes.ConstantesCalendrier;
 import modele.Date;
+import modele.DateCalendrier;
 
 public class GridPaneFormulaireReservation extends GridPane implements ConstantesCalendrier {
     public GridPaneFormulaireReservation() {
 
         //Date du jour
 
-        Date today = new Date();
-        Label labelTitle = new Label(today.getJour() + " " + MOIS[today.getMois()-1] + " " +
-                today.getAnnee());
+//        Date today = new Date();
+//        Label labelTitle = new Label(today.getJour() + " " + MOIS[today.getMois()-1] + " " +
+//                today.getAnnee());
+        Label labelTitle;
 
 
 
@@ -55,7 +58,9 @@ public class GridPaneFormulaireReservation extends GridPane implements Constante
         Label labelA = new Label("à");
 
         Button buttonAnnuler = new Button("Annuler");
+        buttonAnnuler.setOnAction(new Controleur());
         Button buttonEnregistrer = new Button("Enregistrer");
+        buttonEnregistrer.setOnAction(new Controleur());
 
 
 
@@ -111,5 +116,9 @@ public class GridPaneFormulaireReservation extends GridPane implements Constante
         }
         comboBox.setValue(strings[0]);
         return comboBox;
+    }
+
+    public  void setDate(DateCalendrier date){
+        labelTitle.setText(date.toString());
     }
 }
