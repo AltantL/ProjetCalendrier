@@ -12,10 +12,10 @@ public class GridPaneFormulaireReservation extends GridPane implements Constante
 
         //Date du jour
 
-//        Date today = new Date();
-//        Label labelTitle = new Label(today.getJour() + " " + MOIS[today.getMois()-1] + " " +
-//                today.getAnnee());
-        Label labelTitle;
+        Date today = new Date();
+        Label labelTitle = new Label(today.getJour() + " " + MOIS[today.getMois()-1] + " " +
+                today.getAnnee());
+//        Label labelTitle;
 
 
 
@@ -118,7 +118,7 @@ public class GridPaneFormulaireReservation extends GridPane implements Constante
         return comboBox;
     }
 
-    public  void setDate(DateCalendrier date){
-        labelTitle.setText(date.toString());
-    }
+//    public  void setDate(DateCalendrier date){
+//        labelTitle.setText(date.toString());
+//    }
 }
